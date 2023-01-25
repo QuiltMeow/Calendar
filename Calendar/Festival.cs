@@ -32,22 +32,6 @@ namespace Calendar
             {
                 type = CalendarType.Lunar,
                 festivalHoliday = true,
-                month = 12,
-                day = 29,
-                festival = "小年夜"
-            },
-            new Date()
-            {
-                type = CalendarType.Lunar,
-                festivalHoliday = true,
-                month = 12,
-                day = 30,
-                festival = "除夕"
-            },
-            new Date()
-            {
-                type = CalendarType.Lunar,
-                festivalHoliday = true,
                 month = 1,
                 day = 1,
                 festival = "年初一"

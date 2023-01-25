@@ -268,6 +268,21 @@ namespace Calendar
                 }
             }
 
+            if (lunar.Month == 12 && lunar.Day >= 28)
+            {
+                Lunar.Lunar nextTwo = lunar.Next(2);
+                if (nextTwo.Month == 1 && nextTwo.Day == 1)
+                {
+                    return ("小年夜", true);
+                }
+
+                Lunar.Lunar nextOne = lunar.Next(1);
+                if (nextOne.Month == 1 && nextOne.Day == 1)
+                {
+                    return ("除夕", true);
+                }
+            }
+
             Date? result = Festival.getFestival(CalendarType.Solar, solar.Month, solar.Day);
             if (result.HasValue)
             {
